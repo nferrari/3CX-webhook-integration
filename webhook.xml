@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Crm
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  Country="FR"
+  Name="Webhook generic"
+  SupportsEmojis="true"
+  Version="1">
+
+  <Parameters>
+    <Parameter
+      Name="WebhookURL"
+      Type="String"
+      Default=""
+      Title="Webhook URL"
+      Parent="General Configuration"
+      Editor="String" />
+  </Parameters>
+
+  <Scenarios>
+    <Scenario Id="" Type="REST">
+      <Request Url="[WebhookURL]?numero=[Number]"
+         MessagePasses="0"
+         RequestEncoding="UrlEncoded"
+         RequestType="Get"
+         ResponseType="Json"
+         AllowEmptyResponse="true"/>
+      <Outputs AllowEmpty="true"/>
+    </Scenario>
+  </Scenarios>
+</Crm>
