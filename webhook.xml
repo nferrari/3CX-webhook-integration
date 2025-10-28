@@ -19,7 +19,7 @@
 
   <Scenarios>
     <Scenario Id="" Type="REST">
-      <Request Url="[WebhookURL]?numero=[Number]"
+      <Request Url="[WebhookURL]?numero=[Number]&amp;direction=[CallDirection]"
          MessagePasses="0"
          RequestEncoding="UrlEncoded"
          RequestType="Get"
